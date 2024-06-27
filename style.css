@@ -1,0 +1,645 @@
+@charset "UTF-8";
+
+@import 
+url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+
+body {
+    width: 414px;
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
+h1, h2, h3, nav a, nav span, figcaption, menu li, #social li, footer {
+    font-family: bebas neue, sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+nav #menuIcon {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat (7, 1fr);
+    grid-template-rows: 80px 60px;
+    grid-row: 1;
+    background-color: #ffffff;
+    list-style: none;
+    overflow: hidden;
+    width: 414px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+    z-index: 1;
+}
+
+nav #menuIcon:checked ~ nav ul {
+    height: 160px;
+}
+
+nav ul a {
+    font-size: 16px;;
+}
+
+nav ul img {
+    width: 40px;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 10px 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+nav ul li:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+nav ul li:first-child + li {
+    background-color: #EB5428;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    width: 200px;
+}
+
+nav ul li:last-child {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#burger {
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+
+#search {
+    grid-row: 2;
+    background-color: #F2F2F2;
+    text-align: center;
+    display:grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    padding: 15px;
+}
+
+#search input, #search button {
+    height: 50px;
+    margin: 0;
+}
+
+#search input {
+    width: 300px;
+    border: 2px solid #EB5428;
+    grid-row: 1;
+}
+
+#search button {
+    grid-row: 1;
+    background-color: #EB5428;
+    border: 2px solid #EB5428;
+}
+
+nav a, nav span, figcaption, menu li, #social li, footer {
+    font-size: 20px;
+}
+
+p, dd, li, nav, input {
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+menu {
+    margin: auto;
+    display: inline-flex;
+    text-align: center;
+    list-style: none;
+    width: 414px;
+    padding: 0;
+    justify-content: space-around;
+}
+
+menu li a {
+    color: #EB5428;
+}
+
+menu li a:hover {
+    color: #ffffff;
+    background-color: #EB5428;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+main p {
+    margin: 5px;
+    line-height: 1.5;
+}
+
+dt {
+    font-family: montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+h2 {
+    font-size: 30px;
+    text-align:center;
+    margin: 5px;
+}
+
+#details dl {
+    margin: 0 10px;
+    line-height: 1.5;
+}
+
+#details dd {
+    display: inline;
+}
+
+#details dd:after {
+    content: '';
+    display: block;
+}
+
+#details dt {
+    display: inline-block;
+}
+
+[src*="street-tacos"] {
+    width: 414px;
+}
+
+#ingredients ul {
+    list-style: square;
+    line-height: 2;
+}
+
+#directions ol li{
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+#sides {
+    background-color: #7ABFBF;
+    display: flex;
+    flex-direction: column;
+}
+
+#sides img {
+    width: 100px;
+    margin: auto;
+    grid-area: a;
+}
+
+#sides figure {
+    display: grid;
+    grid-template-areas: 
+                    "a b b b"
+                    "a c c c"
+                    "a d d d";
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 33px 33px 33px;
+    column-gap: 15px;
+    padding-left: 10px;
+    margin: 25px 0;
+}
+
+#sides figure:hover {
+    background-color: #F2A007;
+}
+
+#sides figcaption, #sides p, #sides dl, #sides dd {
+    margin: 0;
+}
+
+#sides figcaption {
+    grid-area: b;
+}
+
+#sides p {
+    grid-area: c;
+}
+
+#sides dl {
+    grid-area: d;
+}
+
+#social ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    grid-row: 1;
+}
+
+#social ul li a{
+    text-align: center;
+    color:#EB5428;
+}
+
+#social ul li a:hover {
+    color: #ffffff;
+    background-color: #EB5428;
+}
+
+footer {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-rows: 100px 1fr 50px;
+    row-gap: 25px;
+}
+
+footer img {
+    width: 200px;
+    margin: auto;
+    grid-row: 2;
+}
+
+/* used min instead of max */
+
+@media screen and (min-width:768px) {
+
+    body, nav ul, menu, [src*="street-tacos"]  {
+        width: 768px;
+    }
+
+    nav ul {
+        height: 200px;
+    }
+    
+    nav ul img {
+        width: 60px
+    }
+
+    nav ul li:first-child {
+        grid-column-start: 2;
+        grid-column-end: 7;
+        visibility: hidden;
+    }
+    
+    nav ul li:first-child + li {
+        background-color: #EB5428;
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 100px;
+        margin-left: -23px;
+    }
+    
+    nav ul li:last-child {
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 68px;
+    }
+
+    h1 {
+        text-align: left;
+        padding-top: 65px;
+    }
+
+    menu {
+        position: absolute;
+        background: rgba(255, 255, 255, .7);
+        height: 100px;
+    }
+
+    menu li {
+        text-align: center;
+        padding: 15px;
+    }
+     [src*="street-tacos"] {
+        grid-area: img;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: 
+                        "img img img"
+                        "intro intro intro"
+                        "details details details"
+                        "ingredients directions directions"
+                        "sides sides sides";
+    }
+
+    #intro {
+        grid-area: intro;
+    }
+    
+    #search {
+        position: absolute;
+        background-color: #fff;
+        right: 100px;
+        grid-row: 1;
+        z-index: 1;
+    }
+
+    #details {
+        text-align: center;
+        grid-area: details;
+    }
+
+    #details dd {
+        margin: 10px;
+    }
+
+    #ingredients {
+        grid-area: ingredients;
+    }
+
+    #directions {
+        grid-area: directions;
+    }
+    
+    #social {
+        grid-column: 2;
+    }
+
+    #sides {
+        grid-area: sides;
+        height: 350px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    #sides figure {
+        width: 48%;
+    }
+
+    #sides h2 {
+        width: 768px;
+        margin: 0;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 50px;
+        padding-top: 50px;
+    }
+
+    footer img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    small {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    body {
+        width: 1280px;
+        height: 2000px
+    }
+
+    nav {
+        width: 1280px;
+        grid-template-rows: 1fr 100px;
+    }
+
+    nav ul {
+        width: 1280px;
+        height: 100px;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    nav ul li:first-child {
+        grid-column: 2;
+        visibility: hidden;
+    }
+    
+    nav ul li:first-child + li {
+        grid-row: 1;
+        grid-column: 1;
+        background-color: #EB5428;
+        width: 130px;
+        margin-left: -5px;
+        padding-top: 25px;
+    }
+    
+    nav ul li:last-child {
+        grid-column: 11;
+        grid-row: 1;
+        width: 70px;
+    }
+    
+    #search {
+        position: static;
+        background-color: #F2F2F2;
+        grid-row: 2;
+        padding-top: 50px;
+    }
+
+    menu {
+        display: inline-block;
+        position: relative;
+        width: 125px;
+        height: 745px;
+        border: 2px solid #EB5428;
+        left: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        text-align: center;
+        width: 1280px;
+    }
+
+    menu li:first-child {
+        padding-top: 50px;
+    }
+
+    [src*="street-tacos"] {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        width: 500px;
+    }
+
+    #intro {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    #intro p {
+        line-height: 2;
+    }
+
+    #details {
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: #000000;
+        color: #7ABFBF;
+    }
+
+    #details h2 {
+        padding-bottom: 10px;
+    }
+
+    #details dl {
+        display: grid;
+        grid-template-rows: 25px 25px;
+    }
+
+    #details dt {
+        grid-row: 1;
+    }
+
+    #details dd {
+        grid-row: 2;
+        margin: 0;
+    }
+
+    #ingredients {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 3;
+    }
+
+    #directions {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row: 3;
+    }
+
+    #sides {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        height: 450px;
+    }
+
+    #sides h2 {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: auto;
+    }
+
+    #sides figure {
+        grid-template-areas: 
+                    "img"
+                    "figcap"
+                    "desc"
+                    "rating";
+        grid-template-columns: 250px;
+        grid-template-rows: 250px 35px 35px 35px;
+        width: fit-content;
+        margin: auto;
+    }
+
+    #sides figure img {
+        width: 250px;
+        grid-area: img;
+    }
+
+    #sides figure figcaption {
+        grid-area: figcap;
+    }
+
+    #sides figure p {
+        grid-area: desc;
+    }
+
+    #sides figure dl {
+        grid-area: rating;
+    }
+
+    #sides figure dl dd {
+        display: inline;
+    }
+    
+    #sides figure dl dt {
+        display: inline-block;
+    }
+    
+    #sides figure dl:after {
+        content: '';
+        display: block;
+    }
+    
+    main {
+        position: relative;
+        top: -750px;
+        grid-template-columns: 125px 125px 375px 1fr;
+        grid-template-rows: 1fr 125px 425px 450px;
+    }
+
+    #social {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #social ul {
+        gap: 75px;
+    }
+    
+    footer {
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 1fr 1fr;
+        background-color: #fff;
+        top: -750px;
+        padding: 30px 10px;
+    }
+
+    footer img {
+        width: 150px;
+        grid-column: 1;
+        padding-left: 10px;
+    }
+
+    footer small {
+        grid-column: 2;
+        grid-row: 1;
+        padding-top: 20px;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+
+}
